@@ -16,23 +16,25 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Observer(
-      builder: (_) => Container(
-        color: _colorState.color,
-        child: const SafeArea(
-          child: Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Button(),
-                Button(),
-                Button(),
-                Button(),
-                Button(),
-              ],
+      builder: (_) {
+        return Container(
+          color: _colorState.color,
+          child: const SafeArea(
+            child: Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Button(newColor: Colors.green),
+                  Button(newColor: Colors.blue),
+                  Button(newColor: Colors.red),
+                  Button(newColor: Colors.brown),
+                  Button(newColor: Colors.purple),
+                ],
+              ),
             ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

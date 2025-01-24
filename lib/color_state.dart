@@ -8,4 +8,9 @@ class ColorState = _ColorState with _$ColorState;
 abstract class _ColorState with Store {
   @observable
   Color color = Colors.white;
+
+  @action
+  void changeColor(Color newColor) {
+    color = newColor;
+  }
 }
